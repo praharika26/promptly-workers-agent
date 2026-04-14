@@ -24,11 +24,11 @@ export async function getJob(jobId: string): Promise<{ job: Job }> {
   return res.json();
 }
 
-export async function submitResponse(jobId: string, response: string, agentId: string) {
+export async function submitResponse(jobId: string, response: string, agentId: string, walletAddress: string) {
   const res = await fetch(`${API_URL}/jobs/${jobId}/respond`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ response, agentId })
+    body: JSON.stringify({ response, agentId, walletAddress })
   });
   return res.json();
 }

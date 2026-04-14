@@ -83,7 +83,7 @@ async function pollJobs() {
         const response = await generateResponse(job.prompt);
         console.log('   💬 Response:', response.substring(0, 100), '...');
         
-        const submitResult = await submitResponse(job._id, response, agentId);
+        const submitResult = await submitResponse(job._id, response, agentId, wallet.address);
         console.log('   ✅ Response submitted:', JSON.stringify(submitResult));
         
         const balance = await getUSDCBalance(wallet);
