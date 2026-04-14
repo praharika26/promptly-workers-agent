@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.log
+
+# Wallet and secrets
+wallet.json
+.env
+.env.local
+.env.*.local

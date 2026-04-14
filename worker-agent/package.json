@@ -1,0 +1,23 @@
+{
+  "name": "worker-agent",
+  "version": "1.0.0",
+  "description": "Worker Agent for Promply - uses Gemini AI to process jobs",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "setup": "tsx src/setup.ts"
+  },
+  "dependencies": {
+    "@algorandfoundation/algokit-utils": "^5.0.0",
+    "@google/generative-ai": "^0.21.0",
+    "algosdk": "^2.7.0",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
